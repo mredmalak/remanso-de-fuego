@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import logger from './lib/logger.js';
 //import routes from './config/routes';
 
-const HOST = './localhost';
+const HOST = 'localhost';
 const PORT = 4000;
 
 const server = express();
