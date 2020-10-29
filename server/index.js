@@ -6,8 +6,6 @@ import logger from './lib/logger.js';
 const HOST = './localhost';
 const PORT = 4000;
 
-
-
 const server = express();
 server.use(bodyParser.json());
 //server.use(routes);
@@ -19,8 +17,6 @@ const noEndPointHandler = (request, response, next) => {
     message: 'Error: endpoint not found.',
   });
 };
-
-
 
 server.get('*', noEndPointHandler);
 

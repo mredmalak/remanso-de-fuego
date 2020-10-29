@@ -5,9 +5,9 @@
 //const { combine, timestamp, prettyPrint, json } = format;
 //mon ./index.js
 //const logger = createLogger({
- // format: combine(timestamp(), prettyPrint(), json()),
-  //transports: [new transports.Console()],
-  //exitOnError: false,
+// format: combine(timestamp(), prettyPrint(), json()),
+//transports: [new transports.Console()],
+//exitOnError: false,
 //});
 
 const logger = (request, response, next) => {
