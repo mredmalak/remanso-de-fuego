@@ -8,7 +8,7 @@ mongoose.connect(databaseURI, {
 });
 
 // Animo frase model
-import AnimoFrase from '../models/animo-frases.js';
+import AnimoFrase from '../models/animo-frase.js';
 import animoFrases from './animo-frase.js';
 
 Promise.all(
