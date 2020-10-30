@@ -1,23 +1,23 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import logger from './lib/logger.js';
-//import routes from './config/routes';
+
+// middlewares
+import loggerMiddleware from './middleware/logger-middleware.js';
+import jsonResponse from './middleware/json-response.js';
+
+// Routes
+import animoFraseRouter from './routes/animo-frase.js';
 
 const HOST = 'localhost';
 const PORT = 4000;
 
 const server = express();
 server.use(bodyParser.json());
-//server.use(routes);
-server.use(logger);
+server.use(loggerMiddleware);
+server.use(jsonResponse);
 
-const noEndPointHandler = (request, response, next) => {
-  response.statusCode = 404;
-  response.send({
-    message: 'Error: endpoint not found.',
-  });
-};
+// Server routes
+server.use(animoFraseRouter);
 
-server.get('*', noEndPointHandler);
-
-server.listen(PORT, () => console.log(`Listening port ${PORT}`));
+server.listen(PORT, () => logger.info(`Listening port ${PORT}`));
