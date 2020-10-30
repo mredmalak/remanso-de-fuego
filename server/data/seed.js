@@ -17,3 +17,14 @@ Promise.all(
     console.log(`The resource ${animoFraseResource} has been created`);
   }),
 );
+
+// Galeria model
+import Galeria from '../models/galeria.js';
+import galerias from './galeria.js';
+
+Promise.all(
+  galerias.map(async (galeria) => {
+    const galeriaResource = await Galeria.create({ ...galeria });
+    console.log(`The resource ${galeriaResource} has been created`);
+  }),
+);
