@@ -7,8 +7,9 @@ import mongoose from 'mongoose';
 import loggerMiddleware from './middleware/logger-middleware.js';
 import jsonResponse from './middleware/json-response.js';
 
-// Routes
+// Router
 import animoFraseRouter from './routes/animo-frase.js';
+import galeriaRouter from './routes/galeria.js';
 
 const HOST = 'localhost';
 const PORT = 4000;
@@ -30,5 +31,6 @@ server.use(jsonResponse);
 
 // Server routes
 server.use(animoFraseRouter);
+server.use(galeriaRouter);
 
 server.listen(PORT, () => logger.info(`Listening port ${PORT}`));
