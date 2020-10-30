@@ -5,4 +5,10 @@ const animoFraseRouter = express.Router();
 
 animoFraseRouter.get('/animo-frase', listAllAnimoFrase);
 
+// TODO:
+// GET /animo-frase/:id
+// POST /animo-frase
+// UPDATE /animo-frase/:id
+// DELETE /animo-frase/:id
+
 export default animoFraseRouter;
