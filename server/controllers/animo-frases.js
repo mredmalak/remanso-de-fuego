@@ -13,7 +13,7 @@ export const listAllAnimoFrase = async (request, response) => {
   } catch (error) {
     const { message } = error;
     return response.status(500).send({
-      message,
+      message: `${message}.`,
     });
   }
 };
