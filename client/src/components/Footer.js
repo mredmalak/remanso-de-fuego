@@ -7,7 +7,7 @@ const Footer = () => {
         <span role="img" aria-label="heart">
           ❤️
         </span>{' '}
-        by SEI Español
+        by Jose Aurelio, Germán y Eduardo
       </p>
     </footer>
   );
