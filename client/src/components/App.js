@@ -4,8 +4,8 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Footer from './Footer.js';
 import Header from './Header.js';
 // pages
-import Home from '../pages/Home.js';
-//import ListMusic from '../pages/music/list.js';
+import Home from '../pages/animo-frase/Home.js';
+import ListAnimoFrase from '../pages/animo-frase/list.js';
 //import NewMusic from '../pages/music/new.js';
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route path="/music/new" component={NewMusic} />
-          <Route path="/music" component={ListMusic} /> */}
+          {/* <Route path="/music/new" component={NewMusic} /> */}
+          <Route path="/animo-frase" component={ListAnimoFrase} />
         </Switch>
         <Footer />
       </BrowserRouter>

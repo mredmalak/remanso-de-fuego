@@ -7,7 +7,7 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="">¿Cuál es tu estado de ánimo?</Link>
+            <Link to="/animo-frase">¿Cuál es tu estado de ánimo?</Link>
           </li>
           <li>
             <Link to="">Obras de arte</Link>
