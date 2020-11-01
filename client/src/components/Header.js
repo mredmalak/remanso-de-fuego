@@ -7,10 +7,10 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/music">All</Link>
+            <Link to="">¿Cuál es tu estado de ánimo?</Link>
           </li>
           <li>
-            <Link to="/music/new">New</Link>
+            <Link to="">Obras de arte</Link>
           </li>
         </ul>
       </nav>
