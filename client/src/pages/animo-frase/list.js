@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllAnimoFrase } from '../../lib/fetch-animo-frase.js';
+
 const ListAnimoFrase = () => {
   const [animoFraseData, setAnimoFraseData] = useState([]);
   const fetchAllAnimoFrase = async () => {
