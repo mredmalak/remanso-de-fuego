@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logger from './lib/logger.js';
 import mongoose from 'mongoose';
+import cors from 'cors';
 
 // middlewares
 import loggerMiddleware from './middleware/logger-middleware.js';
@@ -25,6 +26,7 @@ mongoose.connect(databaseURI, {
 
 const server = express();
 
+server.use(cors());
 server.use(bodyParser.json());
 server.use(loggerMiddleware);
 server.use(jsonResponse);

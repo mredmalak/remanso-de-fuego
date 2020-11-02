@@ -3,17 +3,20 @@ import { getAllAnimoFrase } from '../../lib/fetch-animo-frase.js';
 
 const ListAnimoFrase = () => {
   const [animoFraseData, setAnimoFraseData] = useState([]);
+
   const fetchAllAnimoFrase = async () => {
     const data = await getAllAnimoFrase();
     console.log({ data });
     setAnimoFraseData(data);
   };
+
   useEffect(() => {
     fetchAllAnimoFrase();
   }, []);
+
   return (
     <main>
-      <h2>List</h2>
+      <h2>Lista completa de </h2>
       <ul>
         {animoFraseData.map((animoFraseItem, i) => {
           return (
@@ -27,4 +30,5 @@ const ListAnimoFrase = () => {
     </main>
   );
 };
+
 export default ListAnimoFrase;
