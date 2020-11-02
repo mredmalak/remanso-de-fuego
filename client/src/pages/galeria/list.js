@@ -29,6 +29,21 @@ const ListGaleria = () => {
           );
         })}
       </section>
+      <section>
+        <form action="http://localhost:4000/galeria" method="post">
+          <ul>
+            <li>
+              <label htmlFor="img">img:</label>
+              <input type="string" />
+            </li>
+            <li>
+              <label htmlFor="oracion">oracion:</label>
+              <input type="string" defaultValue={''} />
+            </li>
+          </ul>
+        </form>
+        ;
+      </section>
     </main>
   );
 };

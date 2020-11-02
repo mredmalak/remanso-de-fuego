@@ -3,15 +3,15 @@ export const getAllGaleria = async () => {
   return await response.json();
 };
 
-export const createGaleria = async ({ animo, frase }) => {
+export const createGaleria = async ({ img, oracion }) => {
   const response = await fetch('http://localhost:4000/galeria', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      animo,
-      frase,
+      img,
+      oracion,
     }),
   });
 
