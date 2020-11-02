@@ -11,7 +11,6 @@ const animoFraseRouter = express.Router();
 
 animoFraseRouter.get('/animo-frase', listAllAnimoFrase);
 
-// TODO:
 // GET /animo-frase/:id
 animoFraseRouter.get('/animo-frase/:id', getAnimoFraseById);
 // POST /animo-frase
