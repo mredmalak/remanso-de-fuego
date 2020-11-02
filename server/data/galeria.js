@@ -1,7 +1,7 @@
 const galerias = [
   {
-    img: 'una imagen',
-    oracion: 'una oracion',
+    img: 'sem-p73.jpg',
+    oracion: 'La oración en el Huerto',
   },
   {
     img: 'una imagen 2',
