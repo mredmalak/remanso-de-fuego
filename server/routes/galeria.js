@@ -11,7 +11,6 @@ const galeriaRouter = express.Router();
 
 galeriaRouter.get('/galeria', listAllGaleria);
 
-// TODO:
 // GET /galeria/:id
 galeriaRouter.get('/galeria/:id', getGaleriaById);
 // POST /galeria
