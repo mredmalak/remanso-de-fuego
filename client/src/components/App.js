@@ -7,7 +7,7 @@ import Header from './Header.js';
 import Home from '../pages/animo-frase/Home.js';
 import ListAnimoFrase from '../pages/animo-frase/list.js';
 import ListGaleria from '../pages/galeria/list.js';
-//import NewMusic from '../pages/music/new.js';
+
 function App() {
   return (
     <div className="app">
@@ -15,7 +15,6 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route path="/music/new" component={NewMusic} /> */}
           <Route path="/animo-frase" component={ListAnimoFrase} />
           <Route path="/galeria" component={ListGaleria} />
         </Switch>
