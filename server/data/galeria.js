@@ -16,7 +16,7 @@ const galerias = [
   },
   {
     img:
-      'https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F1f%2FLa_Virgen_del_Pilar_%2528Bayeu%2529.jpg%2F200px-La_Virgen_del_Pilar_%2528Bayeu%2529.jpg&sp=1604324864Te77f56c190af360662892d11fba6e5071d3f860b5799a47e7364c7245e846aa8',
+      'https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F1f%2FLa_Virgen_del_Pilar_%2528Bayeu%2529.jpg%2F200px-La_Virgen_del_Pilar_%2528Bayeu%2529.jpg&sp=1604324864Te77f56c190af360662892d11fba6e5071d3f860b5799a47e7364c7245e846aa8',
     oracion: 'una oracion 5',
   },
 ];

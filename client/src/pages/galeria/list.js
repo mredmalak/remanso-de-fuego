@@ -1,14 +1,48 @@
 import React, { useState, useEffect } from 'react';
-import { getAllGaleria } from '../../lib/fetch-galeria.js';
+import {
+  getAllGaleria,
+  createGaleria,
+  deleteGaleria,
+} from '../../lib/fetch-galeria.js';
+import { useHistory } from 'react-router-dom';
 
 const ListGaleria = () => {
   const [galeria, setGaleria] = useState([]);
+
+  const history = useHistory();
+
+  const [newGaleria, setnewGaleria] = useState({
+    img: '',
+    oracion: '',
+  });
 
   const fetchAllGalleries = async () => {
     const galeriaData = await getAllGaleria();
     setGaleria(galeriaData);
   };
 
+  const handleonChange = (event) => {
+    const {
+      currentTarget: { name, value },
+    } = event;
+    setnewGaleria({ ...newGaleria, [name]: value });
+    console.log(newGaleria);
+  };
+
+  const handleOnSubmit = async (event) => {
+    event.preventDefault();
+    await createGaleria(newGaleria);
+    history.go(0);
+  };
+
+  const handleDelete = async (event) => {
+    event.preventDefault();
+    const {
+      currentTarget: { id },
+    } = event;
+    await deleteGaleria(id);
+    history.go(0);
+  };
   useEffect(() => {
     fetchAllGalleries();
   }, []);
@@ -25,22 +59,36 @@ const ListGaleria = () => {
               <picture>
                 <img src={galeriaItem.img} alt={galeriaItem.oracion} />
               </picture>
+              <button onClick={handleDelete} id={galeriaItem._id}>
+                borrar entrada
+              </button>
             </article>
           );
         })}
       </section>
       <section>
-        <form action="http://localhost:4000/galeria" method="post">
+        <form onSubmit={handleOnSubmit}>
           <ul>
             <li>
               <label htmlFor="img">img:</label>
-              <input type="string" />
+              <input
+                type="string"
+                id="img"
+                name="img"
+                onChange={handleonChange}
+              />
             </li>
             <li>
               <label htmlFor="oracion">oracion:</label>
-              <input type="string" defaultValue={''} />
+              <input
+                type="string"
+                id="oracion"
+                name="oracion"
+                onChange={handleonChange}
+              />
             </li>
           </ul>
+          <button type="submit">crear nueva entrada </button>
         </form>
         ;
       </section>
