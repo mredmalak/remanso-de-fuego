@@ -1,7 +1,7 @@
 const galerias = [
   {
     img:
-      'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.regmurcia.com%2Fservlet%2Fintegra.servlets.Imagenes%3FMETHOD%3DVERIMAGEN_121547%26nombre%3Dsem-p73.jpg',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Gethsemane_Carl_Bloch.jpg/330px-Gethsemane_Carl_Bloch.jpg',
     oracion: 'La oración en el Huerto',
   },
   {
