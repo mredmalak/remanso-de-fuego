@@ -3,17 +3,20 @@ export const getAllAnimoFrase = async () => {
   return await response.json();
 };
 
-export const createAnimoFrase = async ({ animo, frase }) => {
+export const createAnimoFrase = async (newAnimoFrase) => {
   const response = await fetch('http://localhost:4000/animo-frase', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      animo,
-      frase,
-    }),
+    body: JSON.stringify(newAnimoFrase),
   });
 
   return await response.json();
+};
+
+export const deleteAnimoFrase = async (id) => {
+  await fetch(`http://localhost:4000/animo-frase/${id}`, {
+    method: 'DELETE',
+  });
 };
